@@ -41,17 +41,22 @@ export function useVoiceRecognition({ language, onFinal, onInterim, onError }: U
     const SR = window.SpeechRecognition || window.webkitSpeechRecognition
     if (!SR) return
     const r = new SR()
-    r.continuous = false; r.interimResults = true; r.lang = language; r.maxAlternatives = 1
+    r.continuous = false; r.interimResults = true; r.lang = language; r.maxAlternatives = 3
     r.onstart = () => { setState('listening'); setInterim('') }
     r.onresult = (e: SpeechRecognitionEvent) => {
       let fin = '', int = ''
       for (let i = e.resultIndex; i < e.results.length; i++) {
         const res = e.results[i]
-        if (res.isFinal) fin += res[0].transcript
-        else int += res[0].transcript
+        if (res.isFinal) {
+          fin += res[0].transcript
+        } else {
+          int += res[0].transcript
+        }
       }
-      if (int) { setInterim(int); onInterim?.(int) }
-      if (fin) { setState('processing'); setInterim(''); onFinal(fin.trim()) }
+      const cleanInt = int.replace(/[\.\,\?\!\'\"]/g, '').trim()
+      const cleanFin = fin.replace(/[\.\,\?\!\'\"]/g, '').trim()
+      if (cleanInt) { setInterim(cleanInt); onInterim?.(cleanInt) }
+      if (cleanFin) { setState('processing'); setInterim(''); onFinal(cleanFin) }
     }
     r.onerror = (e: SpeechRecognitionErrorEvent) => {
       const msgs: Record<string, string> = {

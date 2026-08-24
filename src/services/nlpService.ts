@@ -106,7 +106,7 @@ function extractQuantityUnit(text: string): { quantity: number; unit: string; cl
   return { quantity: q, unit, cleaned }
 }
 
-const STRIP_WORDS = /\b(add|buy|get|need|want|purchase|remove|delete|find|search|show|me|change|update|set|mark|bought|please|just|a|an|the|some|any|for|to|of|on|in|i|we|my|me|instead|from|with|and|or|it|this|that)\b/gi
+const STRIP_WORDS = /\b(add|buy|get|need|want|purchase|remove|delete|find|search|show|me|change|update|set|mark|bought|please|just|a|an|the|some|any|for|to|of|on|in|i|we|my|me|instead|from|with|and|or|it|this|that|ok|okay|can|could|would|you)\b/gi
 
 export function parseCommand(transcript: string): ParsedCommand {
   const text = transcript.trim()
