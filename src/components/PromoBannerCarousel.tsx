@@ -123,7 +123,7 @@ export function PromoBannerCarousel() {
   }
 
   return (
-    <div className="relative h-32 sm:h-28 rounded-2xl overflow-hidden select-none">
+    <div className="relative h-36 sm:h-32 rounded-2xl overflow-hidden select-none">
       {/* Slides */}
       <AnimatePresence initial={false} custom={direction} mode="popLayout">
         <motion.div
@@ -134,26 +134,26 @@ export function PromoBannerCarousel() {
           animate="center"
           exit="exit"
           transition={{ duration: 0.4, ease: [0.25, 1, 0.5, 1] }}
-          className={cn('absolute inset-0 bg-gradient-to-r p-5 flex items-center gap-4', banner.gradient)}
+          className={cn('absolute inset-0 bg-gradient-to-r px-12 py-4 flex items-center gap-4', banner.gradient)}
         >
           {/* Icon decoration */}
-          <div className="absolute right-4 top-1/2 -translate-y-1/2 scale-150 opacity-50 pointer-events-none">
+          <div className="absolute right-6 top-1/2 -translate-y-1/2 scale-150 opacity-40 pointer-events-none">
             {banner.icon}
           </div>
 
           {/* Content */}
           <div className="flex-1 min-w-0 relative z-10">
-            <p className="font-black text-white text-base leading-tight truncate">{banner.headline}</p>
-            <p className="text-white/80 text-xs mt-0.5 truncate">{banner.sub}</p>
+            <p className="font-black text-white text-base leading-tight truncate drop-shadow-xs">{banner.headline}</p>
+            <p className="text-white/90 text-xs mt-0.5 font-medium truncate drop-shadow-xs">{banner.sub}</p>
             {banner.endTime && <Countdown endTime={banner.endTime} />}
             <motion.button
               whileTap={{ scale: 0.95 }}
               onClick={() => handleCTA(banner)}
               className={cn(
-                'mt-2 px-4 py-1.5 rounded-xl text-xs font-bold transition-all',
+                'mt-2 px-4 py-1.5 rounded-xl text-xs font-bold transition-all shadow-xs',
                 applied === banner.code
                   ? 'bg-emerald-400 text-white'
-                  : 'bg-white/20 text-white hover:bg-white/30 backdrop-blur-sm border border-white/30'
+                  : 'bg-white/25 text-white hover:bg-white/35 backdrop-blur-md border border-white/40'
               )}
             >
               {applied === banner.code ? '✓ Applied!' : banner.cta}
@@ -164,11 +164,13 @@ export function PromoBannerCarousel() {
 
       {/* Nav buttons */}
       <button onClick={() => go(-1)}
-        className="absolute left-2 top-1/2 -translate-y-1/2 z-20 w-7 h-7 bg-black/20 hover:bg-black/40 rounded-full flex items-center justify-center transition-colors backdrop-blur-sm">
+        className="absolute left-2.5 top-1/2 -translate-y-1/2 z-20 w-7 h-7 bg-black/30 hover:bg-black/50 rounded-full flex items-center justify-center transition-colors backdrop-blur-md shadow-sm"
+        aria-label="Previous slide">
         <ChevronLeft className="w-4 h-4 text-white" />
       </button>
       <button onClick={() => go(1)}
-        className="absolute right-2 top-1/2 -translate-y-1/2 z-20 w-7 h-7 bg-black/20 hover:bg-black/40 rounded-full flex items-center justify-center transition-colors backdrop-blur-sm">
+        className="absolute right-2.5 top-1/2 -translate-y-1/2 z-20 w-7 h-7 bg-black/30 hover:bg-black/50 rounded-full flex items-center justify-center transition-colors backdrop-blur-md shadow-sm"
+        aria-label="Next slide">
         <ChevronRight className="w-4 h-4 text-white" />
       </button>
 
