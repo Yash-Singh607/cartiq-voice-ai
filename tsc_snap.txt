@@ -1,0 +1,1 @@
+﻿src/pages/InsightsPage.tsx(184,52): error TS2339: Property 'image' does not exist on type '{ name: string; count: number; }'.

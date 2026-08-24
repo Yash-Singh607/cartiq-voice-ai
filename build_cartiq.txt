@@ -1,0 +1,71 @@
+﻿[36mvite v6.4.3 [32mbuilding for production...[36m[39m
+transforming...
+[32mΓ£ô[39m 4 modules transformed.
+node : [31mΓ£ù[39m Build failed in 
+482ms
+At line:1 char:1
++ node "C:\Program Files\nodejs\node_mo
+dules\npm\bin\npm-cli.js" exec - ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpeci 
+   fied: ([31mΓ£ù[39m Build failed   
+  in 482ms:String) [], RemoteExcepti   
+ on
+    + FullyQualifiedErrorId : NativeCo 
+   mmandError
+ 
+[31merror during build:
+[31m[vite]: Rollup failed to resolve 
+import "@/context/AppContext" from 
+"C:/Users/yashp/Documents/Unthinkable 
+project/voicecart-ai/src/App.tsx".
+This is most likely unintended because 
+it can break your application at 
+runtime.
+If you do want to externalize this 
+module explicitly add it to
+`build.rollupOptions.external`[31m
+    at viteLog (file:///C:/Users/yashp/
+Documents/Unthinkable%20project/voiceca
+rt-ai/node_modules/vite/dist/node/chunk
+s/dep-Dm0c1Wj2.js:46504:15)
+    at file:///C:/Users/yashp/Documents
+/Unthinkable%20project/voicecart-ai/nod
+e_modules/vite/dist/node/chunks/dep-Dm0
+c1Wj2.js:46562:18
+    at onwarn (file:///C:/Users/yashp/D
+ocuments/Unthinkable%20project/voicecar
+t-ai/node_modules/@vitejs/plugin-react/
+dist/index.js:90:7)
+    at file:///C:/Users/yashp/Documents
+/Unthinkable%20project/voicecart-ai/nod
+e_modules/vite/dist/node/chunks/dep-Dm0
+c1Wj2.js:46560:7
+    at onRollupLog (file:///C:/Users/ya
+shp/Documents/Unthinkable%20project/voi
+cecart-ai/node_modules/vite/dist/node/c
+hunks/dep-Dm0c1Wj2.js:46552:5)
+    at onLog (file:///C:/Users/yashp/Do
+cuments/Unthinkable%20project/voicecart
+-ai/node_modules/vite/dist/node/chunks/
+dep-Dm0c1Wj2.js:46202:7)
+    at file:///C:/Users/yashp/Documents
+/Unthinkable%20project/voicecart-ai/nod
+e_modules/rollup/dist/es/shared/node-en
+try.js:21200:32
+    at Object.logger [as onLog] (file:/
+//C:/Users/yashp/Documents/Unthinkable%
+20project/voicecart-ai/node_modules/rol
+lup/dist/es/shared/node-entry.js:23185:
+9)
+    at 
+ModuleLoader.handleInvalidResolvedId (f
+ile:///C:/Users/yashp/Documents/Unthink
+able%20project/voicecart-ai/node_module
+s/rollup/dist/es/shared/node-entry.js:2
+1930:26)
+    at file:///C:/Users/yashp/Documents
+/Unthinkable%20project/voicecart-ai/nod
+e_modules/rollup/dist/es/shared/node-en
+try.js:21888:26[39m

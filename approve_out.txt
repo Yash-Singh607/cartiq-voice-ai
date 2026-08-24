@@ -1,0 +1,3 @@
+﻿Approved esbuild:
+  added esbuild@0.28.2
+  added esbuild@0.25.12

@@ -1,0 +1,76 @@
+﻿
+[1m[46m RUN [49m[22m [36mv3.2.7 [39m[90mC:/Users/yashp/Documents/Unthinkable project/voicecart-ai[39m
+
+ [32mΓ£ô[39m tests/categorizationService.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 2[2mms[22m[39m
+ [32mΓ£ô[39m tests/nlpService.test.ts [2m([22m[2m19 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32mΓ£ô[39m tests/recommendationService.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 15[2mms[22m[39m
+ [31mΓ¥»[39m tests/productService.test.ts [2m([22m[2m11 tests[22m[2m | [22m[31m1 failed[39m[2m)[22m[32m 18[2mms[22m[39m
+   [32mΓ£ô[39m searchProducts[2m > [22mreturns all products with no filters[32m 1[2mms[22m[39m
+[31m   [31m├ù[31m searchProducts[2m > [22mfilters by query "milk"[39m[32m 5[2mms[22m[39m
+[31m     ΓåÆ expected 'kitkat chocolate nestle chocolate wafΓÇª' to contain 'milk'[39m
+   [32mΓ£ô[39m searchProducts[2m > [22mfilters by category Dairy[32m 1[2mms[22m[39m
+   [32mΓ£ô[39m searchProducts[2m > [22mfilters by maxPrice 100[32m 1[2mms[22m[39m
+   [32mΓ£ô[39m searchProducts[2m > [22mfilters by minPrice 200[32m 1[2mms[22m[39m
+   [32mΓ£ô[39m searchProducts[2m > [22mfilters by price range 50ΓÇô200[32m 2[2mms[22m[39m
+   [32mΓ£ô[39m searchProducts[2m > [22mreturns empty for impossible query[32m 0[2mms[22m[39m
+   [32mΓ£ô[39m getProductSubstitutes[2m > [22mreturns substitutes for p001[32m 1[2mms[22m[39m
+   [32mΓ£ô[39m getProductSubstitutes[2m > [22mreturns empty for unknown id[32m 0[2mms[22m[39m
+   [32mΓ£ô[39m PRODUCTS dataset[2m > [22mhas 100+ products[32m 0[2mms[22m[39m
+   [32mΓ£ô[39m PRODUCTS dataset[2m > [22mall products have required fields[32m 5[2mms[22m[39m
+node : 
+At line:1 char:1
++ node "C:\Program Files\nodejs\node_mo
+dules\npm\bin\npm-cli.js" exec - ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpeci 
+   fied: (:String) [], RemoteExceptio  
+  n
+    + FullyQualifiedErrorId : NativeCo 
+   mmandError
+ 
+[31mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[39m[1m[41
+m Failed Tests 1 [49m[22m[31mΓÄ»ΓÄ»Γ
+Ä»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[39m
+
+[41m[1m FAIL [22m[49m 
+tests/productService.test.ts[2m > 
+[22msearchProducts[2m > [22mfilters 
+by query "milk"
+[31m[1mAssertionError[22m: expected 
+'kitkat chocolate nestle chocolate 
+wafΓÇª' to contain 'milk'[39m
+
+Expected: [32m"[7mmil[27mk"[39m
+Received: [31m"[7mkitkat chocolate 
+nestle chocolate wafer snack 
+brea[27mk"[39m
+
+[36m [2mΓ¥»[22m tests/productService
+.test.ts:[2m14:20[22m[39m
+    [90m 12| [39m    
+r[33m.[39m[34mforEach[39m(p 
+[33m=>[39m {
+    [90m 13| [39m      const text = 
+`${p.name} ${p.brand} ${p.tags.join(' 
+')}`.toLowerCΓÇª
+    [90m 14| [39m      [34mexpect[3
+9m(text)[33m.[39m[34mtoContain[39m(
+[32m'milk'[39m)
+    [90m   | [39m                   
+[31m^[39m
+    [90m 15| [39m    })
+    [90m 16| [39m  })
+[90m [2mΓ¥»[22m tests/productService
+.test.ts:[2m12:7[22m[39m
+
+[31m[2mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»
+ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»
+ΓÄ»[1/1]ΓÄ»[22m[39m
+
+
+[2m Test Files [22m [1m[31m1 failed[39m[22m[2m | [22m[1m[32m3 passed[39m[22m[90m (4)[39m
+[2m      Tests [22m [1m[31m1 failed[39m[22m[2m | [22m[1m[32m43 passed[39m[22m[90m (44)[39m
+[2m   Start at [22m 16:06:43
+[2m   Duration [22m 1.52s[2m (transform 151ms, setup 451ms, collect 231ms, tests 44ms, environment 2.52s, prepare 503ms)[22m
+
