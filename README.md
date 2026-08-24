@@ -1,5 +1,6 @@
 # 🛒 CartIQ — Voice Command Shopping Assistant & Smart Grocery Platform
 
+> **🚀 Live Working Application**: [https://cartiq-voice-ai.vercel.app](https://cartiq-voice-ai.vercel.app)
 > **Technical Assessment Project Submission** | Software Engineering Position
 
 CartIQ is a real-time, voice-first shopping list manager and smart grocery platform. It enables natural language voice ordering, automatic product categorization, smart item recommendations, alternative substitute matching, and multi-currency delivery management.
