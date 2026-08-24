@@ -98,11 +98,6 @@ export function RealTimeGreeting() {
           </div>
           <div className="shrink-0 flex flex-col items-end gap-1.5">
             <LiveClock />
-            <div className="flex items-center gap-1.5 bg-emerald-500 text-white text-[11px] font-bold px-3 py-1.5 rounded-full shadow-sm">
-              <Zap className="w-3 h-3" />
-              <span>10-min Express</span>
-              <span className="inline-block w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
-            </div>
           </div>
         </div>
 
